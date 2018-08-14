@@ -120,7 +120,8 @@ module OctocatalogDiff
         end
 
         @catalog = response[:parsed]
-        @catalog_json = ::JSON.generate(@catalog)
+        #@catalog_json = ::JSON.generate(@catalog)
+        @catalog_json = response[:body]
         @error_message = nil
       end
     end
